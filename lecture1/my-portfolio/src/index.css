@@ -1,0 +1,124 @@
+/* ========================================
+   CSS 변수 정의 - 컬러 팔레트 디자인 시스템
+   ======================================== */
+:root {
+  /* Primary Colors */
+  --color-primary: #C9A962;
+  --color-primary-light: #D4B978;
+  --color-primary-dark: #A88B4A;
+
+  /* Secondary Colors */
+  --color-secondary: #F8F8F5;
+  --color-accent: #C9A962;
+
+  /* Background Colors */
+  --color-bg-primary: #0D0D0D;
+  --color-bg-secondary: #1A1A1A;
+  --color-bg-tertiary: #2A2A2A;
+  --color-bg-light: #F8F8F5;
+  --color-bg-white: #FFFFFF;
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0A0A0;
+  --color-text-muted: #666666;
+  --color-text-dark: #1A1A1A;
+
+  /* Interactive Colors */
+  --color-button-primary: #FFFFFF;
+  --color-button-hover: #E8E8E8;
+  --color-button-accent: #C9A962;
+  --color-link: #FFFFFF;
+  --color-link-hover: #C9A962;
+
+  /* Border & Divider */
+  --color-border-dark: #2A2A2A;
+  --color-border-light: #E0E0E0;
+  --color-divider: #333333;
+
+  /* Gradients */
+  --gradient-dark: linear-gradient(180deg, #0D0D0D 0%, #1A1A1A 100%);
+  --gradient-gold: linear-gradient(135deg, #C9A962 0%, #D4B978 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 4px 16px rgba(201, 169, 98, 0.3);
+}
+
+/* ========================================
+   CSS 초기화
+   ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   링크 스타일
+   ======================================== */
+a {
+  font-weight: 500;
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ========================================
+   스크롤바 스타일
+   ======================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ========================================
+   선택 영역 스타일
+   ======================================== */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-bg-primary);
+}
